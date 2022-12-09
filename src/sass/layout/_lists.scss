@@ -1,0 +1,20 @@
+.hero-buttons {
+  @extend %list;
+
+  @include respondTo('diapente') {
+    display: flex;
+    gap: 40px;
+  }
+
+  @include respondTo('diapason') {
+    gap: 60px;
+  }
+
+  &__item {
+    @include respondTo('tritonus') {
+        & + & {
+          margin-top: 24px;
+        }
+      }
+  }
+}

@@ -1,0 +1,8 @@
+.hero-btn {
+    @include buttonSize(
+        $section-button: true,
+        $padding-top: 15px,
+        $padding-bottom: 13px
+      );
+      @include buttonPlace($transparent-button: true);
+}

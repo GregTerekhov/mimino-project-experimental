@@ -1,0 +1,54 @@
+.location {
+    border: 1px solid getColor('accent');
+    border-radius: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    width: 210px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: getColor('accent');
+    @include transition(border-color, color);
+
+    &:focus, &:hover, &:active {
+      border-color: getColor('primary-inversed');
+      color: getColor('primary-inversed');
+    }
+  
+    @include respondTo('diapente') {
+      width: 285px;
+    }
+  }
+  
+  .location__link {
+    @extend %link;
+    font-family: $text-font-stack;
+    font-size: 12px;
+    line-height: 1.219;
+    letter-spacing: 0.01em;
+    color: #e5e5e5;
+    text-align: left;
+    @include transition(color);
+  
+    @include respondTo('diapente') {
+      font-size: 16px;
+    }
+
+    .location:hover &,
+    .location:focus &, 
+    .location:active & {
+      color: getColor('accent');
+    }
+  }
+  
+  .location__icon {
+    fill: currentColor;
+    margin-left: 6px;
+  
+    @include respondTo('diapente') {
+      margin-left: 10px;
+      width: 24px;
+      height: 24px;
+    }
+  }

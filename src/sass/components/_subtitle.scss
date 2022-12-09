@@ -1,0 +1,7 @@
+.subtitle {
+    @extend %marginPaddingReset;
+    font-family: $text-font-stack;
+    font-weight: 600;
+    line-height: 1.219;
+    letter-spacing: 0.02em;
+  }

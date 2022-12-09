@@ -1,0 +1,43 @@
+.socials {
+  @extend %list;
+  display: flex;
+  align-items: center;
+  margin-top: 58px;
+
+  @include respondTo('diapente') {
+    margin-top: 25px;
+  }
+
+  @include respondTo('diapason') {
+    display: none;
+  }
+
+  &__link {
+    color: getColor('accent');
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: getColor('accent-darker');
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    display: block;
+  }
+}
+
+.socials-header {
+  display: none;
+  @extend %list;
+  margin-left: auto;
+  @include respondTo('diapason') {
+    display: flex;
+    gap: 20px;
+  }
+  &__icon {
+    @extend %icon;
+    color: mix(transparent, getColor('accent'), 30%);
+  }
+}

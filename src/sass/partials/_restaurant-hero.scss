@@ -1,0 +1,111 @@
+.rest-hero {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.rest-hero__backdrop {
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+  //   url('../images/rest-hero-phone-1x.jpg');
+
+  @media (min-resolution: 2dppx),
+    (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url('../images/hero/restaurant/rest-hero-phone-2x.jpg');
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url('../images/hero/restaurant/rest-hero-tablet-1x.jpg');
+  }
+
+  @media (min-resolution: 2dppx),
+    (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url('../images/hero/restaurant/rest-hero-tablet-2x.jpg');
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url('../images/hero/restaurant/rest-hero-desktop-1x.jpg');
+  }
+
+  @media (min-resolution: 2dppx),
+    (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+    // background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    //   url('../images/rest-hero-desktop-2x.jpg');
+  }
+}
+
+.rest-hero__title {
+  margin-bottom: 20px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 16px;
+  }
+
+  .rest-hero__buttons-set {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 0px;
+    gap: 40px;
+  }
+
+  .rest-hero__caption {
+    width: 358px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    margin-bottom: 144px;
+    font-size: 35px;
+  }
+
+  .rest-hero__soc {
+    left: 48px;
+    bottom: 15px;
+  }
+
+  .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 64px;
+  }
+
+  .rest-hero__name {
+    width: 104px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    margin-bottom: 56px;
+  }
+
+  @include respondTo('diapason') {
+    margin-bottom: 64px;
+  }
+}
+
+.rest-hero__location {
+  @include respondTo('tritonus') {
+    position: absolute;
+    top: 64px;
+    right: 15px;
+  }
+}
+
+.restaurant-hero__socials {
+  gap: 23px;
+}

@@ -1,0 +1,63 @@
+//Міксин, який виводить необхідну точку злому
+@mixin respondTo($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Міксин для transition
+@mixin transition($props...) {
+  -webkit-transition-property: $props;
+  -o-transition-property: $props;
+  transition-property: $props;
+  -webkit-transition-duration: 250ms;
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: $timing-function;
+  -o-transition-timing-function: $timing-function;
+  transition-timing-function: $timing-function;
+}
+
+// Міксин виведення розміру кнопки
+@mixin buttonSize($width: null, $padding-top: null, $padding-bottom: null, $booking-room: false, $price-button: false, $section-button: false) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  @if $booking-room or $price-button {
+    width: 232px;
+  } @else if $section-button {
+    width: 236px;
+  } @else {
+    width: $width;
+  }
+}
+
+// Міксин визначення деяких стилей кнопок відносно місця їх положення 
+@mixin buttonPlace($transparent-button: false, $light-section-button: false, $menu-button: false) {
+  @if $transparent-button {
+    background-color: transparentize($color: getColor('primary'), $amount: 0.6);
+    border: 2px solid getColor('primary-inversed');
+  } @else if $light-section-button {
+    border: 2px solid #F0ECD6;
+    background-color: getColor('primary');
+  } @else if $menu-button {
+    background-color: getColor('primary');
+    border: 2px solid #FFFDEE;
+  } @else {
+    border: 1px solid getColor('accent');
+    background-color: getColor('primary');
+  }
+}
+
+//Міксин призначення border-radius кнопкам оформлення бронювання
+@mixin buttonReserve($border-radius: 25px) {
+  // Manually declare to provide an override to the browser default
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  } @else {
+    border-radius: 2px;
+  }
+}

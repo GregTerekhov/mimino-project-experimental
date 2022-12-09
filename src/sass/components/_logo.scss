@@ -1,0 +1,34 @@
+.logo {
+  @extend %link;
+  font-family: $logo-font;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  line-height: 1.075;
+
+  &--header {
+    display: block;
+    color: getColor('primary-inversed');
+    font-size: 36px;
+    // мінус 10пікс для компенсації різниці ширини лого, що зумовлена шириною останної літери
+    margin-right: calc(52px - 10px);
+
+    @include respondTo('diapente') {
+      font-size: 40px;
+      margin-right: calc(87px - 10px);
+    }
+    @include respondTo('diapason') {
+      margin-right: calc(96px - 10px);
+    }
+  }
+
+  &--footer {
+    font-size: 40px;
+    color: getColor('accent');
+
+    @include respondTo('diapente') {
+      margin-left: auto;
+      font-size: 64px;
+  }
+
+  }
+}

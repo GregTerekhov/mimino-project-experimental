@@ -1,0 +1,16 @@
+.main-tagline {
+  font-family: $text-times-font;
+  @extend %marginPaddingReset;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.15;
+  color: getColor('primary-inversed');
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 113px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 137px;
+    font-size: 36px;
+  }
+}

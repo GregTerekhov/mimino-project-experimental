@@ -1,0 +1,39 @@
+.section {
+  
+  &__hero {
+    padding-top: 181px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    @include respondTo('diapente') {
+      padding-top: 188px;
+      padding-bottom: 15px;
+      max-width: 1024px;
+    }
+
+    @include respondTo('diapason') {
+      padding-top: 164px;
+      padding-bottom: 64px;
+      max-width: 1280px;
+    }
+  }
+
+  &__content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #fffdee;
+
+    @include respondTo('diapente') {
+      padding-top: 120px;
+      padding-bottom: 32px;
+    }
+
+    @include respondTo('diapason') {
+      padding-bottom: 50px;
+    }
+  }
+}

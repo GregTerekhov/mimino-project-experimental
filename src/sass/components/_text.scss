@@ -1,0 +1,12 @@
+.text {
+    @extend %marginPaddingReset;
+    font-family: $text-font-stack;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.219;
+    letter-spacing: 0.02em;
+
+    @include respondTo('diapente') {
+        font-size: 16px;
+      }
+}

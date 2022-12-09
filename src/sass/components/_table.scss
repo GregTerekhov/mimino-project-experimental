@@ -1,0 +1,10 @@
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  @extend %marginPaddingReset;
+  border-spacing: 0px;
+} 

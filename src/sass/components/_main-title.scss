@@ -1,0 +1,15 @@
+.main-title {
+    @extend %marginPaddingReset;
+    font-family: $logo-font;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-right: -36px;
+    color: getColor('primary-inversed');
+  
+    @include respondTo('diapente') {
+      font-size: 128px;
+    }
+}

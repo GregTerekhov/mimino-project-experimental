@@ -1,0 +1,173 @@
+.hotel-details {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 40px;
+
+    &__canvas {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+
+        background-image: linear-gradient(#000000a6, #000000a6),
+            url('../images/home/hotel-details/mobile/hotel-details-bcgi.jpg');
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(#000000a3, #000000a3),
+                url('../images/home/hotel-details/mobile/hotel-details-bcgi-2x.jpg');
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: 1024px;
+            background-image: linear-gradient(#000000a3, #000000a3),
+                url('../images/home/hotel-details/tablet/hotel-details-bcgi.jpg');
+        }
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(#000000a3, #000000a3),
+                url('../images/home/hotel-details/tablet/hotel-details-bcgi-2x.jpg');
+        }
+
+        @media screen and (min-width: 1280px) {
+            max-width: 1280px;
+            background-image: linear-gradient(#000000a3, #000000a3),
+                url('../images/home/hotel-details/desktop/hotel-details-bcgi.jpg');
+        }
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(#000000a3, #000000a3),
+                url('../images/home/hotel-details/desktop/hotel-details-bcgi-2x.jpg');
+        }
+    }
+}
+
+.hotel-details__container {
+    position: relative;
+    z-index: 2;
+    min-height: 620px; //вказана висота поки не має слайдеру!!!
+}
+
+.hotel-details__brand {
+    display: block;
+    padding-top: 24px;
+    // text-align: center;
+    margin-left: 128px;
+    color: getColor('primary-inversed');
+    margin-bottom: 12px;
+
+    @include respondTo('tritonus') {
+        text-align: center;
+    }
+
+    @include respondTo('diapente') {
+        margin-right: 278px;
+        margin-left: auto;
+        margin-bottom: 16px;
+    }
+}
+
+.hotel-details__title {
+    margin-left: 186px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: getColor('primary-inversed');
+
+    @include respondTo('diapente') {
+        font-size: 24px;
+        margin-left: 612px;
+    }
+}
+
+.hotel-details__text {
+    max-width: 243px;
+    margin-left: 17px;
+    color: #BABABA;
+
+    @include respondTo('diapente') {
+        max-width: 549px;
+        margin-left: 150px;
+    }
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 32px;
+    padding-bottom: 40px;
+
+    @include respondTo('diapente') {
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.hotel-details__button {
+    @include buttonSize($padding-top: 14px, $padding-bottom: 14px, $section-button: true);
+    @include buttonPlace($transparent-button: true);
+}
+
+.lines {
+    position: absolute;
+    display: block;
+    left: 33.33%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background-color: rgba(122, 122, 122, 0.4);
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0px;
+        right: -33vw;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(122, 122, 122, 0.4);
+    }
+
+    @include respondTo('diapente') {
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: rgba(122, 122, 122, 0.4);
+        }
+
+        &::before {
+            left: -23vw;
+        }
+
+        &::after {
+            right: -23vw;
+        }
+    }
+}
+
+.hotel-details__slide--img {
+    height: 270px;
+    object-fit: cover;
+}

@@ -1,0 +1,293 @@
+.room-hero {
+  position: relative;
+  padding-top: 350px;
+  padding-bottom: 14px;
+  max-width: 414px;
+  height: 740px;
+  margin: 0 auto;
+
+  @include respondTo('diapente') {
+    padding-top: 340px;
+    padding-bottom: 24px;
+  }
+
+  @include respondTo('diapason') {
+    padding-top: 412px;
+    padding-bottom: 48px;
+  }
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-image: url('../images/room-hero/room-hero.jpg'),
+  //   linear-gradient(#000000a6, #000000a6);
+
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    // background-image: url('../images/room-hero/room-hero-2x.jpg'),
+    //   linear-gradient(#000000a3, #000000a3);
+
+  }
+
+  @include respondTo('diapente') {
+    padding-top: 340px;
+    padding-bottom: 24px;
+    max-width: 1024px;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.65), 
+      rgba(0, 0, 0, 0.65), 
+      url('../images/hero/room/room-hero-tablet.jpg'))
+      ;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.65), 
+        rgba(0, 0, 0, 0.65), 
+        url('../images/hero/room/room-hero-tablet-2x.jpg'));
+    }
+  }
+
+  @include respondTo('diapason') {
+    padding-top: 412px;
+    padding-bottom: 48px;
+    max-width: 1280px;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.65), 
+      rgba(0, 0, 0, 0.65), 
+      url('../images/hero/room/room-hero-desktop.jpg'));
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+    rgba(0, 0, 0, 0.65), 
+    rgba(0, 0, 0, 0.65), 
+    url('../images/hero/room/room-hero-desktop-2x.jpg'));
+    }
+  }
+}
+
+.room-hero-decor {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 143px;
+    background-image: linear-gradient(
+      180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.55) 54.17%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    @include respondTo('diapente') {
+      height: 100px;
+    }
+    @include respondTo('diapason') {
+      height: 147px;
+    }
+  }
+}
+
+.room-hero__location {
+  @include respondTo('tritonus') {
+    position: absolute;
+    top: 64px;
+    right: 15px;
+  }
+}
+
+.room-hero__link {
+  position: absolute;
+  top: 64px;
+  right: 15px;
+
+  @extend %link;
+
+  padding-left: 6px;
+  padding-right: 3px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+  width: 210px;
+  height: 47px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+
+  color: scale-color($color: getColor('primary-inversed'), $blackness: 11.5%);
+  fill: getColor('accent');
+  border: 1px solid transparentize($color: getColor('accent'), $amount: 0.3);
+  border-radius: 2px;
+
+  @include respondTo('diapente') {
+    left: 47px;
+    top: 660px;
+
+    font-size: 16px;
+
+    width: 285px;
+    height: 56px;
+    column-gap: 10px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+  }
+
+  @include respondTo('diapason') {
+    display: none;
+  }
+}
+
+.room-hero__icon {
+  width: 20px;
+  height: 20px;
+
+  @include respondTo('diapente') {
+    width: 24px;
+    height: 24px;
+  }
+}
+.room-hero__swiper {
+  @extend %list;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-hero__swiper_margin {
+  margin-bottom: 93px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 88px;
+  }
+}
+
+.room-hero__swiper-button {
+  @extend %marginPaddingReset;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: transparentize($color: getColor('primary'), $amount: 0.35);
+  fill: getColor('accent');
+  border: none;
+}
+
+.room-hero__title {
+  @extend %marginPaddingReset;
+
+  font-family: $text-times-font;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: getColor('primary-inversed');
+
+  @include respondTo('diapente') {
+    font-size: 36px;
+  }
+}
+
+.room-hero__title_margin {
+  margin-bottom: 14px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 24px;
+  }
+}
+
+.room-hero__title_transform {
+  text-transform: lowercase;
+}
+
+.hero-room__descr {
+  @extend %marginPaddingReset;
+
+  max-width: 325px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: getColor('primary-inversed');
+
+  @include respondTo('diapente') {
+    font-size: 16px;
+
+
+    max-width: 400px;
+  }
+}
+
+.hero-room__descr_margin {
+  margin-bottom: 16px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 24px;
+  }
+
+  @include respondTo('diapason') {
+    margin-bottom: 0;
+  }
+}
+
+.room-hero__social {
+  @extend %list;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  @include respondTo('diapente') {
+    position: absolute;
+    top: 678px;
+    left: 372px;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+
+  @include respondTo('diapason') {
+    display: none;
+  }
+}
+
+.room-hero__icon {
+  fill: transparentize($color: getColor('accent'), $amount: 0.3);
+}
+
+.room-hero__button {
+  @include buttonSize(
+    $price-button: true,
+    $padding-top: 14px,
+    $padding-bottom: 14px
+  );
+  @include buttonPlace($transparent-button: true);
+  position: absolute;
+  right: 73px;
+  bottom: 40px;
+
+  @include respondTo('diapente') {
+    right: 47px;
+    bottom: 64px;
+  }
+
+  @include respondTo('diapason') {
+    right: 85px;
+    bottom: 66px;
+  }
+}

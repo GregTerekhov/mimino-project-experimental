@@ -1,0 +1,9 @@
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    @include respondTo('diapente') {
+      justify-content: space-between;
+    }
+}

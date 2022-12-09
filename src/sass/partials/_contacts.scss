@@ -1,0 +1,197 @@
+.contacts {
+    position:relative;
+    padding-top: 36px;
+    padding-bottom: 32px;
+    @include respondTo('diapente') {
+        padding-top: 56px;
+        padding-bottom: 44px;
+    }
+    @include respondTo('diapason') {
+        padding-bottom: 73px;
+    }
+}
+.contacts__container{
+    z-index: 2;
+    @include respondTo('diapente') {
+        display: flex;
+    }
+}
+.contacts__brand {
+    margin: 4px 0 12px 0px;
+    @include respondTo('diapente') {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+    @include respondTo('diapason') {
+        margin-bottom: 16px;
+    }
+}
+.contacts__subtitle {
+    font-size: 16px;
+    color: #5F5F5F;
+    margin-bottom: 16px;
+    @include respondTo('diapente') {
+        margin-bottom: 52px;
+    }
+    @include respondTo('diapason') {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+}
+.contacts__list {
+    @extend %list;
+    margin-bottom: 32px;
+    @include respondTo('diapente') {
+        margin-bottom: 0;
+    }
+    @include respondTo('diapason') {
+        margin-bottom: 0;
+    }
+}
+.contacts__item {
+    display: flex;
+    align-items: center;
+    @include respondTo('diapente') {
+        display: block;
+    }
+}
+.contacts__item:not(:last-child) {
+    margin-bottom: 16px;
+    @include respondTo('diapente') {
+        margin-bottom: 24px;
+    }
+}
+.contacts__item:last-child {
+    @include respondTo('diapente') {
+        margin-top: 24px;
+    }
+}
+.contacts__department {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-family: $text-font-stack;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: getColor('accent-darker');
+    margin: 0;
+    @include respondTo('diapente') {
+        position: relative;
+        margin-bottom: 8px;
+    }
+    @include respondTo('diapason') {
+        margin-bottom: 8px;
+    }
+}
+.contacts__box {
+    display: flex;
+    background-color: getColor('primary-inversed');
+    border: 0.5px solid getColor('accent-darker');
+    border-radius: 2px;
+    padding-top: 9px;
+    padding-right: 8px;
+    padding-bottom: 7px;
+    margin-left: 124px;
+    @include respondTo('diapente') {
+        margin-left: 0;
+        padding-right: 0;
+    }
+    // padding-right: 16px;
+    // @include respondTo('diapente') {
+    //     padding-right: 0;
+    // }
+}
+.contacts__number {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    font-family: $text-font-stack;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.02em;
+    color: #494848;
+    cursor: pointer;
+    @include respondTo('diapason') {
+        color: #828282;
+    }
+}
+.contacts__number-second{
+    margin-left: 12px;
+    @include respondTo('diapente') {
+        margin-left: 16px;
+    }
+}
+.contacts__icon {
+    fill: getColor('accent-darker');
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.contacts__address {
+    width: 260px;
+    margin-left: auto;
+    padding-top: 9px;
+    padding-right: 33px;
+    padding-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: getColor('primary-inversed');
+    border: 0.5px solid getColor('accent-darker');
+    border-radius: 2px;
+    @include respondTo('diapente') {
+        width: 285px;
+    }
+}
+
+.contacts__icons {
+    fill: getColor('accent-darker');
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.contacts__link {
+    @extend %link;
+    font-family: $text-font-stack;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    color: #494848;
+
+    @include respondTo('diapason') {
+        color: #828282;
+    }
+}
+
+.contacts__box-map{
+    @include respondTo('diapente') {
+        margin-left: 101px;
+    }
+    @include respondTo('diapason') {
+        margin-left: 108px;
+    }
+}
+.contacts__map {
+    border: 1px solid #BABABA;
+    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    max-width: 384px;
+    max-height: 220px;
+    @include respondTo('diapente') {
+        max-width: 535px;
+        max-height: 412px;
+        margin-top: 13px;
+    }
+    @include respondTo('diapason') {
+        max-width: 634px;
+        max-height: 412px;
+        margin-top: 8px;
+    }
+}

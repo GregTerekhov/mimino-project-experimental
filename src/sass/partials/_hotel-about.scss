@@ -1,0 +1,347 @@
+.hotel-about {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  background-color: #fffdee;
+
+  @include respondTo('diapente') {
+    padding-top: 120px;
+    padding-bottom: 32px;
+  }
+
+  @include respondTo('diapason') {
+    padding-bottom: 50px;
+  }
+}
+
+.vertical-lines {
+  position: absolute;
+  display: block;
+  left: 33.33%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: rgba(122, 122, 122, 0.4);
+  z-index: 0;
+
+  @include respondTo('pre-unisonus') {
+    display: none;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0px;
+    right: -33vw;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(122, 122, 122, 0.4);
+  }
+
+  @include respondTo('diapente') {
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(122, 122, 122, 0.4);
+    }
+
+    &::before {
+      left: -23vw;
+    }
+
+    &::after {
+      right: -23vw;
+    }
+
+  }
+}
+
+.vertical-lines {
+  position: absolute;
+  display: block;
+  left: 33.33%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: rgba(122, 122, 122, 0.4);
+  z-index: 0;
+
+  @include respondTo('pre-unisonus') {
+    display: none;
+  }
+  
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0px;
+    right: -33vw;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(122, 122, 122, 0.4);
+  }
+  
+  @include respondTo('diapente') {
+    left: 50%;
+    transform: translateX(-50%);
+  
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(122, 122, 122, 0.4);
+    }
+  
+    &::before {
+      left: -23vw;
+    }
+  
+    &::after {
+      right: -23vw;
+    }
+  }
+}
+  
+.hotel-about__title {
+  margin-top: 0;
+  margin-bottom: 6px;
+  text-align: right;
+
+  color: #b4b4b4;
+
+  @include respondTo('diapente') {
+    font-size: 32px;
+    margin-bottom: 4px;
+  }
+}
+
+.hotel-about__logo {
+  display: block;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 0;
+  max-width: 127px;
+  color: #494848;
+
+  @include respondTo('pre-unisonus') {
+    margin-bottom: 4vw;
+  }
+
+  @include respondTo('unisonus') {
+    margin-bottom: 16px;
+  }
+
+  @include respondTo('diapente') {
+    max-width: 204px;
+    margin-bottom: 24px;
+  }
+
+  @include respondTo('diapason') {
+    color: #828282;
+  }
+}
+
+.hotel-about-article-one {
+  @include respondTo('pre-unisonus') {
+    margin-bottom: 8vw;
+  }
+
+  @include respondTo('tritonus') {
+    margin-bottom: 28px;
+  }
+
+  @include respondTo('diapente') {
+    margin-bottom: 142px;
+  }
+
+  @include respondTo('diapason') {
+    margin-bottom: 162px;
+  }
+}
+
+.hotel-about-article-one__description {
+  margin-left: auto;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+
+  color: #5f5f5f;
+
+  @include respondTo('pre-unisonus') {
+    width: 58vw;
+    margin-bottom: 7vw;
+    font-size: 9px;
+  }
+
+  @include respondTo('unisonus') {
+    width: 242px;
+    margin-bottom: 28px;
+    font-size: 12px;
+  }
+
+  @include respondTo('diapente') {
+    font-size: 16px;
+    width: 419px;
+    margin-bottom: 0px;
+  }
+
+  @include respondTo('diapason') {
+    width: 488px;
+  }
+}
+
+.hotel-about-article-one__img {
+  position: relative;
+
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+
+  @include respondTo('pre-unisonus') {
+    max-width: 63%;
+  }
+
+  @include respondTo('unisonus') {
+    max-width: 244px;
+  }
+
+  @include respondTo('diapente') {
+    position: absolute;
+    top: -144px;
+    right: 512px;
+    max-width: 400px;
+  }
+
+  @include respondTo('diapason') {
+    right: 640px;
+    max-width: 460px;
+  }
+}
+
+.hotel-about-article-two {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 21px;
+
+  @include respondTo('pre-unisonus') {
+    margin-bottom: 0;
+  }
+}
+
+.hotel-about-article-two__description {
+  color: #c79002;
+
+  @include respondTo('pre-unisonus') {
+    width: 42%;
+    font-size: 9px;
+    margin-right: 5vw;
+  }
+
+  @include respondTo('unisonus') {
+    width: 163px;
+  }
+
+  @include respondTo('diapente') {
+    width: 312px;
+    margin-right: 48px;
+  }
+
+  @include respondTo('diapason') {
+    width: 311px;
+    margin-right: 45px;
+    margin-bottom: 120px;
+  }
+}
+
+.hotel-about-article-two__img {
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+
+  @include respondTo('pre-unisonus') {
+    width: 48%;
+  }
+
+  @include respondTo('unisonus') {
+    max-width: 200px;
+  }
+
+  @include respondTo('diapente') {
+    max-width: 350px;
+  }
+
+  @include respondTo('diapason') {
+    max-width: 460px;
+  }
+}
+
+.container-swiper--positioned {
+
+  @include respondTo('diapente') {
+    margin-top: -86px;
+    margin-left: -110px;
+  }
+
+  @include respondTo('diapason') {
+    margin-top: -220px;
+    margin-left: -72px;
+  }
+
+}
+
+.swiper--modified {
+  @include respondTo('tritonus') {
+    width: calc(245px * 2 + 16px);
+    transform: translateX(-105px);
+  }
+}
+
+.swiper-slide--modified {
+  overflow: hidden;
+}
+
+.wrapper-mask>.swiper-button-prev--positioned {
+
+  @include respondTo('tritonus') {
+    left: 307px;
+  }
+
+  @include respondTo('diapente') {
+    left: 391px;
+  }
+
+  @include respondTo('diapason') {
+    left: 495px;
+  }
+}
+
+.wrapper-mask>.swiper-button-next--positioned {
+
+  @include respondTo('tritonus') {
+    left: 369px;
+  }
+
+  @include respondTo('diapente') {
+    left: 457px;
+  }
+
+  @include respondTo('diapason') {
+    left: 556px;
+  }
+}

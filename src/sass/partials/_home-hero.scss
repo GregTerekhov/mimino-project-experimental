@@ -1,0 +1,83 @@
+.home-hero {
+  background-image: linear-gradient(#000000a6, #000000a6),
+    url('../images/hero/home/home-hero.jpg');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(#000000a3, #000000a3),
+      url('../images/hero/home/home-hero2x.jpg');
+  }
+
+  @include respondTo('diapente') {
+    background-image: linear-gradient(#000000a3, #000000a3),
+      url('../images/hero/home/home-hero-tablet.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(#000000a3, #000000a3),
+        url('../images/hero/home/home-hero-tablet2x.jpg');
+    }
+  }
+
+  @include respondTo('diapason') {
+    background-image: linear-gradient(#000000a3, #000000a3),
+      url('../images/hero/home/home-hero-desktop.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(#000000a3, #000000a3),
+        url('../images/hero/home/home-hero-desktop2x.jpg');
+    }
+  }
+}
+
+.home-hero__title {
+  margin-bottom: 24px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 16px;
+  }
+  @include respondTo('diapason') {
+    margin-bottom: 32px;
+  }
+}
+
+.home-hero__subtitle {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: getColor('primary-inversed');
+
+  @include respondTo('diapente') {
+    margin-bottom: 56px;
+    font-size: 20px;
+  }
+
+  @include respondTo('diapason') {
+    margin-bottom: 64px;
+  }
+}
+
+.home-hero__location {
+  @include respondTo('tritonus') {
+    position: absolute;
+    top: 64px;
+    right: 15px;
+  }
+}
+
+.home-hero__socials {
+  gap: 20px;
+}
+
+// .home-hero__address-link:not(:lang(ae)):not(:lang(ar)):not(:lang(arc)):not(
+//     :lang(bcc)
+//   ):not(:lang(bqi)):not(:lang(ckb)):not(:lang(dv)):not(:lang(fa)):not(
+//     :lang(glk)
+//   ):not(:lang(he)):not(:lang(ku)):not(:lang(mzn)):not(:lang(nqo)):not(
+//     :lang(pnb)
+//   ):not(:lang(ps)):not(:lang(sd)):not(:lang(ug)):not(:lang(ur)):not(:lang(yi)) {
+//   text-align: center;
+// }

@@ -1,0 +1,260 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+    z-index: 1000;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+.popup__area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    transition: all 0.8s ease 0s;
+}
+
+.popup__content {
+    background-color: #FFFDEE;
+    color: getColor('primary');
+    max-width: 414px;
+    padding: 60px 15px;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+
+    @include respondTo('diapente') {
+        width: 712px;
+        max-width: 712px;
+        padding: 60px 60px;
+    }
+}
+
+.popup__close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+
+    svg {
+        stroke: #808080;
+    }
+}
+
+.popup__title {
+    margin-bottom: 40px;
+    font-family: $text-times-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(28/24);
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: getColor('primary');
+    text-transform: uppercase;
+
+    @include respondTo('diapente') {
+        font-size: 40px;
+        line-height: calc(46/40);
+    }
+}
+
+.modal__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include respondTo('diapente') {
+        column-gap: 16px;
+    }
+}
+
+.modal__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+
+    @include respondTo('diapente') {
+        flex-basis: calc((100% - 16px)/2);
+    }
+}
+
+.modal__item--unic {
+    @include respondTo('diapente') {
+        margin-left: 304px;
+    }
+
+}
+
+.modal__item input {
+    padding: 17px 12px;
+    width: 100%;
+    font-family: $text-times-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    letter-spacing: 0.05em;
+    color: #808080;
+    background-color: inherit;
+    border: 1px solid getColor('accent-darken');
+    border-radius: 2px;
+    outline: none;
+
+    @include respondTo('diapente') {
+        font-size: 24px;
+        line-height: calc(28/24);
+    }
+}
+
+.nice-select {
+    width: 100%;
+    height: 100%;
+    padding-left: 12px;
+    color: #808080;
+    background-color: inherit;
+    border: 1px solid getColor('accent-darken');
+    border-radius: 2px;
+
+    &-dropdown {
+        width: 100%;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: getColor('accent-darken');
+    }
+}
+
+.nice-select .option {
+    font-family: $text-times-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    letter-spacing: 0.05em;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.nice-select::after {
+    height: 12px;
+    width: 12px;
+    border-bottom: 2px solid getColor('accent-darken');
+    border-right: 2px solid getColor('accent-darken');
+}
+
+.current {
+    padding: 17px 0;
+    display: block;
+    font-family: $text-times-font;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    letter-spacing: 0.05em;
+    color: #808080;
+
+    @include respondTo('diapente') {
+        font-size: 24px;
+        line-height: calc(28/24);
+    }
+}
+
+.form__label {
+    margin-left: 12px;
+    font-family: $text-font-stack;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(17/14);
+    letter-spacing: 0.02em;
+    color: getColor('accent-darken');
+}
+
+$enable-rounded: false;
+
+.modal__button {
+    @include buttonReserve;
+    @include buttonPlace;
+    @include buttonSize($width: 100%, $padding-top: 19px, $padding-bottom: 19px);
+    margin: 40px auto 0;
+
+    @include respondTo('diapente') {
+        padding: 17px;
+        line-height: calc(29/24);
+    }
+}
+
+/*------Popup2---------*/
+.modal__subtitle {
+    margin-bottom: 28px;
+    font-family: $text-times-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(28/24);
+    letter-spacing: 0.05em;
+    color: #808080;
+}
+
+.modal__descr {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19/16);
+    letter-spacing: 0.02em;
+    color: getColor('accent-darken');
+
+    @include respondTo('diapente') {
+        font-size: 16px;
+        line-height: calc(19/16);
+    }
+}
+
+.form__label--bigger {
+    @include respondTo('pre-unisonus') {
+        font-size: 16px;
+        line-height: calc(19/16);
+    }
+
+}

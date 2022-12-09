@@ -1,0 +1,311 @@
+<!-- Content -->
+<!--!Popup1-->
+<button type="button" data-popup="popup1" class="popup-link">Попап №1</button>
+<div id="popup1" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button class="popup__close close-popup" type="button">
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-vector_x"></use>
+        </svg>
+      </button>
+      <div class="popup__title">Забронювати номер</div>
+      <div class="modal">
+        <form class="modal__form form" name="room-booking" action="#">
+          <div class="modal__body">
+            <!--Name-->
+            <div class="modal__item">
+              <input
+                class="form__user-name"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Ваше ім'я"
+              />
+              <label class="form__label" for="user-name"
+                >На кого забронювати номер?</label
+              >
+            </div>
+            <!--Tel-->
+            <div class="modal__item">
+              <input
+                class="form__tel js-mask"
+                type="tel"
+                name="user-tel"
+                id="user-tel"
+                placeholder="+38 (___) ___-__-__"
+              />
+              <label class="form__label" for="user-tel">Номер телефону</label>
+            </div>
+            <!--Category-->
+            <div class="modal__item modal__item--unic">
+              <select class="js-select" name="user-category" id="user-category">
+                <option value="Двомісний люкс" selected>Двомісний люкс</option>
+                <option value="Двомісний номер">Двомісний номер</option>
+                <option value="Трьохмісний номер">Трьохмісний номер</option>
+              </select>
+              <label class="form__label" for="user-category"
+                >Категорія номеру</label
+              >
+            </div>
+
+            <!--Arrival date-->
+            <div class="modal__item">
+              <select class="js-select" name="user-arrival" id="user-arrival">
+                <option value="Сьогодні" selected>Сьогодні</option>
+                <option value="Завтра">Завтра</option>
+                <option value="Післязавтра">Післязавтра</option>
+              </select>
+              <label class="form__label" for="user-arrival">Дата заїзду</label>
+            </div>
+            <!--Departure date-->
+            <div class="modal__item">
+              <select
+                class="js-select"
+                name="user-departure"
+                id="user-departure"
+              >
+                <option value="Сьогодні">Сьогодні</option>
+                <option value="Завтра" selected>Завтра</option>
+                <option value="Післязавтра">Післязавтра</option>
+              </select>
+              <label class="form__label" for="user-departure"
+                >Дата виїзду</label
+              >
+            </div>
+          </div>
+          <button class="button-reserve modal__button" type="submit">
+            Оформити бронювання
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--!Popup2-->
+<button type="button" data-popup="popup2" class="popup-link">Попап №2</button>
+<div id="popup2" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button class="popup__close close-popup" type="button">
+        <svg class="labelx" width="24" height="24">
+          <use href="./images/icons.svg#icon-vector_x"></use>
+        </svg>
+      </button>
+      <div class="popup__title">Ціни на номер</div>
+
+      <div class="modal">
+        <form class="modal__form form" name="room-booking" action="#">
+          <div class="modal__subtitle">Двомісний люкс</div>
+          <div class="modal__descr">Категорія номеру</div>
+          <div class="modal__body">
+            <!--Quantity of nights-->
+            <div class="modal__item">
+              <select class="js-select" name="nights-qt" id="nights-qt">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <label class="form__label form__label--bigger" for="nights-qt"
+                >Кількість ночей</label
+              >
+            </div>
+            <!--Price-->
+            <div class="modal__item">
+              <input
+                class="form__room-price"
+                type="text"
+                name="room-price"
+                id="room-pricee"
+                placeholder="1000"
+              />
+              <label class="form__label form__label--bigger" for="room-price"
+                >грн</label
+              >
+            </div>
+          </div>
+          <button class="button-reserve modal__button" type="submit">
+            Забронювати номер
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--!Popup21-->
+<button type="button" data-popup="popup21" class="popup-link">Попап №21</button>
+<div id="popup21" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button class="popup__close close-popup" type="button">
+        <svg class="labelx" width="24" height="24">
+          <use href="./images/icons.svg#icon-vector_x"></use>
+        </svg>
+      </button>
+      <div class="popup__title">Ціни на номер</div>
+      <div class="modal">
+        <form class="modal__form form" name="room-booking" action="#">
+          <div class="modal__subtitle">Трьохмісний номер</div>
+          <div class="modal__descr">Категорія номеру</div>
+          <div class="modal__body">
+            <!--Quantity of nights-->
+            <div class="modal__item">
+              <select class="js-select" name="nights-qt" id="nights-qt">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <label class="form__label form__label--bigger" for="nights-qt"
+                >Кількість ночей</label
+              >
+            </div>
+            <!--Price-->
+            <div class="modal__item">
+              <input
+                class="form__room-price"
+                type="text"
+                name="room-price"
+                id="room-pricee"
+                placeholder="1000"
+                disabled
+              />
+              <label class="form__label form__label--bigger" for="room-price"
+                >грн</label
+              >
+            </div>
+          </div>
+          <button class="button-reserve modal__button" type="submit">
+            Забронювати номер
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--!Popup22-->
+<button type="button" data-popup="popup22" class="popup-link">Попап №22</button>
+<div id="popup22" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button class="popup__close close-popup" type="button">
+        <svg class="labelx" width="24" height="24">
+          <use href="./images/icons.svg#icon-vector_x"></use>
+        </svg>
+      </button>
+      <div class="popup__title">Ціни на номер</div>
+      <div class="modal">
+        <form class="modal__form form" name="room-booking" action="#">
+          <div class="modal__subtitle">Двомісний номер</div>
+          <div class="modal__descr">Категорія номеру</div>
+          <div class="modal__body">
+            <!--Quantity of nights-->
+            <div class="modal__item">
+              <select class="js-select" name="nights-qt" id="nights-qt">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <label class="form__label form__label--bigger" for="nights-qt"
+                >Кількість ночей</label
+              >
+            </div>
+            <!--Price-->
+            <div class="modal__item">
+              <input
+                class="form__room-price"
+                type="text"
+                name="room-price"
+                id="room-price"
+                placeholder="1000"
+                disabled
+              />
+              <label class="form__label form__label--bigger" for="room-price"
+                >грн</label
+              >
+            </div>
+          </div>
+          <button class="button-reserve modal__button" type="submit">
+            Забронювати номер
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--!Popup3-->
+<button type="button" data-popup="popup3" class="popup-link">Попап №3</button>
+<div id="popup3" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button class="popup__close close-popup" type="button">
+        <svg class="labelx" width="24" height="24">
+          <use href="./images/icons.svg#icon-vector_x"></use>
+        </svg>
+      </button>
+      <div class="popup__title">Забронювати столик</div>
+      <div class="modal">
+        <form class="modal__form form" name="room-booking" action="#">
+          <div class="modal__body">
+            <!--Name-->
+            <div class="modal__item">
+              <input
+                class="form__user-name"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Ваше ім'я"
+              />
+              <label class="form__label" for="user-name"
+                >На кого забронювати столик?</label
+              >
+            </div>
+            <!--Tel-->
+            <div class="modal__item">
+              <input
+                class="form__tel js-mask"
+                type="tel"
+                name="user-tel"
+                id="user-tel"
+                placeholder="+38 (___) ___-__-__"
+              />
+              <label class="form__label" for="user-tel">Номер телефону</label>
+            </div>
+            <!--Quantity of persons-->
+            <div class="modal__item">
+              <select class="js-select" name="persons-qt" id="persons-qt">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+                <option value="3">6</option>
+              </select>
+              <label class="form__label" for="persons-qt"
+                >Столик на яку кількість осіб?</label
+              >
+            </div>
+            <!--Booking date-->
+            <div class="modal__item">
+              <select class="js-select" name="booking-date" id="booking-date">
+                <option value="Сьогодні" selected>Сьогодні</option>
+                <option value="Завтра">Завтра</option>
+                <option value="Післязавтра">Післязавтра</option>
+              </select>
+              <label class="form__label" for="booking-date"
+                >На яку дату бронювати?</label
+              >
+            </div>
+          </div>
+          <button class="button-reserve modal__button" type="submit">
+            Оформити бронювання
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--------------------------------------------------------------->
+
+<script src="./js/nice-select2.js"></script>
+<script src="./js/imask.js"></script>

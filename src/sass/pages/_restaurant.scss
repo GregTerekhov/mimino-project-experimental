@@ -1,0 +1,14 @@
+.restaurant {
+    background-image: linear-gradient(
+        to right,
+        getColor('background') 139px,
+        rgba(122, 122, 122, 0.4) 139px,
+        rgba(122, 122, 122, 0.4) 140px,
+        getColor('background') 140px,
+        getColor('background') 273px,
+        rgba(122, 122, 122, 0.4) 273px,
+        rgba(122, 122, 122, 0.4) 274px,
+        getColor('background') 274px,
+        getColor('background') 414px
+    );
+}

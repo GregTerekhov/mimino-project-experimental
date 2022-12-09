@@ -1,0 +1,40 @@
+// Точки перелому
+$breakpoints: (
+  'pre-unisonus': (
+    max-width: 413px,
+  ),
+  'unisonus': (
+    min-width: 414px,
+  ),
+  'tritonus': (
+    max-width: 1023px,
+  ),
+  'diapente': (
+    min-width: 1024px,
+  ),
+  'heptachordium maius': (
+    max-width: 1279px,
+  ),
+  'diapason': (
+    min-width: 1280px,
+  ),
+) !default;
+
+// Кольори
+$colors: (
+  'accent': #f3c653,
+  'accent-darker': #C79002,
+  'background': #fffdee,
+  'primary': #000000,
+  'primary-inversed': #ffffff,
+);
+
+// Шрифти
+$text-font-stack: 'Montserrat', sans-serif;
+
+$logo-font: 'Film P3', sans-serif;
+
+$text-times-font: 'Times New Roman', serif;
+
+// Кубік Без'є
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);

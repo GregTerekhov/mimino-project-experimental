@@ -1,0 +1,214 @@
+.container-swiper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+
+  &--right {
+    // быстрый способ сделать вариант со сдвигом вправо через зеркализацию
+    transform: scale(-1, 1);
+    flex-direction: column-reverse;
+
+    & .button-wrapper {
+      // компенсация зеркализации лишних элементов
+      transform: scale(-1, 1);
+    }
+
+    @include respondTo('diapente') {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include respondTo('diapente') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+  }
+}
+
+.wrapper-mask {
+  position: relative;
+  overflow: hidden;
+
+  // outline: 1px dotted red;
+  @include respondTo('tritonus') {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include respondTo('diapente') {
+    width: 600px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: -63px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @include respondTo('diapason') {
+    width: 670px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: -58px;
+    margin-right: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.swiper {
+  overflow: visible;
+  width: calc(194px * 2 + 16px);
+  transform: translateX(-72px);
+
+  @include respondTo('diapente') {
+    transform: translateX(93px);
+    width: calc(194px * 2 + 40px);
+  }
+
+  @include respondTo('diapason') {
+    transform: translateX(130px);
+    width: calc(245px * 2 + 40px);
+  }
+
+  &--picture {
+    height: 100%;
+  }
+
+  .container-swiper--large & {
+    width: calc(245px * 2 + 16px);
+
+    @include respondTo('diapente') {
+      transform: translateX(93px);
+      width: calc(194px * 2 + 40px);
+    }
+
+    @include respondTo('diapason') {
+      transform: translateX(130px);
+      width: calc(245px * 2 + 40px);
+    }
+  }
+
+  &-slide {
+    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    visibility: visible;
+
+    @include respondTo('diapente') {
+      visibility: hidden;
+    }
+  }
+
+  &-wrapper {
+    @extend %list;
+  }
+}
+
+
+
+.swiper-slide.swiper-slide-prev,
+.swiper-slide.swiper-slide-active {
+  visibility: visible;
+}
+
+//ПЕРЕВИЗНАЧЕНІ СТИЛІ ДЛЯ СТОРІНКИ HOME СЕКЦІЯ HOTEL-DETAILS!!!!!! 
+.home-details__swiper-slide.swiper-slide-prev {
+  width: 162px !important;
+}
+
+.home-details__swiper-slide.swiper-slide-active {
+  width: 270px !important;
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @extend %icon;
+  top: calc(100% - 20px);
+  fill: getColor('primary');
+  @include transition(fill);
+  &:hover {
+    fill: getColor('accent');
+  }
+}
+
+.swiper-button-prev {
+  left: 0px;
+
+  @include respondTo('diapente') {
+    right: calc(108px + 32px + 32px);
+    left: unset;
+
+    .container-swiper--right & {
+      right: unset;
+      left: 61px;
+    }
+  }
+
+  @include respondTo('diapason') {
+    right: calc(108px + 32px);
+    left: unset;
+
+    .container-swiper--right & {
+      left: 55px;
+    }
+  }
+}
+
+.swiper-button-next {
+  left: calc(32px + 32px);
+
+  @include respondTo('diapente') {
+    right: 109px;
+    left: unset;
+
+    .container-swiper--right & {
+      right: unset;
+      left: 125px;
+    }
+  }
+
+  @include respondTo('diapason') {
+    right: 81px;
+    left: unset;
+
+    .container-swiper--right & {
+      left: 120px;
+    }
+  }
+}
+
+.swiper-button-disabled.swiper-button-next,
+.swiper-button-disabled.swiper-button-prev {
+  opacity: 1;
+  fill: getColor('primary-inversed');
+}
+
+.wrapper-swiper {
+  margin-top: -24px;
+  @include respondTo('diapente') {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &--reversed {
+    flex-direction: row;
+  }
+}
+
+.swiper-button-disabled.swiper-button-prev {
+  opacity: 1;
+  //background-image: url('../images/swiper/arrow-left-disabled.svg');
+}

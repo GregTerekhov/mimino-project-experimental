@@ -1,0 +1,49 @@
+.lines {
+  position: absolute;
+  display: none;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 616px;
+  background-color: rgba(122, 122, 122, 0.4);
+  z-index: -1;
+
+  @include respondTo('diapente') {
+    display: block;
+    left: 50%;
+    width: 0;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      width: 1px;
+      height: 616px;
+      background-color: rgba(122, 122, 122, 0.4);
+      right: -247px;
+    }
+  }
+
+  @include respondTo('diapason') {
+    left: 50%;
+    width: 1;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      width: 1px;
+      height: 616px;
+      background-color: rgba(122, 122, 122, 0.4);
+    }
+
+    &::before {
+      left: -302px;
+    }
+
+    &::after {
+      right: -302px;
+    }
+  }
+}

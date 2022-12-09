@@ -1,0 +1,21 @@
+.button {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.219;
+    letter-spacing: 0.02em;
+    color: getColor('accent');
+    border-radius: 25px;
+    cursor: pointer;
+    @include transition(background-color, border-color); 
+
+    &:focus, &:hover, &:active {
+        background-color: getColor('primary-inversed');
+        border-color: getColor('accent');
+    }
+
+    &--booking {
+        @include buttonPlace($transparent-button: true);
+        @include buttonSize($booking-room: true, $padding-top: 15px, $padding-bottom: 13px);
+    }
+}

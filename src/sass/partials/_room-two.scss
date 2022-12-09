@@ -1,0 +1,176 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  @extend %marginPaddingReset;
+}
+.room-two {
+  padding: 32px 0;
+  background-color: #fffdee;
+  @include respondTo('diapente') {
+    padding: 62px 0;
+    position: relative;
+  }
+  @include respondTo('diapason') {
+    padding: 72px 0 48px;
+  }
+  &__title {
+    color: #b4b4b4;
+    margin-bottom: 8px;
+
+    @include respondTo('diapente') {
+      font-size: 32px;
+      line-height: 1.16;
+      margin-bottom: 4px;
+    }
+  }
+  &__brand {
+    color: #494848;
+    margin-bottom: 32px;
+    @include respondTo('diapente') {
+      margin-bottom: 62px;
+    }
+    @include respondTo('diapason') {
+      margin-bottom: 72px;
+    }
+  }
+  &__name {
+    font-family: 'Times New Roman';
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin-bottom: 12px;
+    @include respondTo('diapente') {
+      font-size: 30px;
+      line-height: 1.13;
+      margin-bottom: 16px;
+    }
+    @include respondTo('diapason') {
+      font-size: 36px;
+      line-height: 1.14;
+      margin-bottom: 24px;
+    }
+  }
+  &__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: #5f5f5f;
+    margin-bottom: 32px;
+    width: 258px;
+    @include respondTo('diapente') {
+      font-size: 16px;
+      line-height: 1.25;
+      width: 439px;
+      margin-bottom: 117px;
+    }
+    @include respondTo('diapason') {
+      margin-bottom: 108px;
+    }
+  }
+  &__picture {
+    max-width: 242px;
+    height: 322px;
+    margin-left: auto;
+    // margin-bottom: 32px;
+    box-shadow: 5px 5px 70px 17px #00000040;
+    @include respondTo('diapente') {
+      min-width: 400px;
+      height: 524px;
+      margin-left: 0;
+      margin-bottom: 0;
+      position: absolute;
+      top: -12%;
+      right: 10%;
+    }
+    @include respondTo('diapason') {
+      top: -12%;
+      right: 14%;
+      min-width: 460px;
+      height: 574px;
+    }
+  }
+  &__thumb {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    transform: translatex(-38%);
+    @include respondTo('diapente') {
+      transform: translatex(-0%);
+      gap: 40px;
+    }
+  }
+  &__img {
+    width: 194px;
+    height: 194px;
+    box-shadow: 5px 5px 70px 17px #00000040;
+    @include respondTo('diapason') {
+      width: 254px;
+      height: 254px;
+    }
+  }
+  &__btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 236px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    background-color: #000000;
+    text-align: center;
+  }
+  &__btn:not(:last-child) {
+    margin-bottom: 16px;
+    @include respondTo('diapente') {
+      margin-top: 41px;
+      @include respondTo('diapason') {
+        margin-top: 71px;
+      }
+    }
+  }
+}
+.img-thumb {
+  position: relative;
+  height: 194px;
+  @include respondTo('diapason') {
+    height: 254px;
+  }
+}
+.btn-thumb {
+  display: flex;
+  margin: 28px 0;
+  @include respondTo('diapente') {
+    margin: 40px 0 0 331px;
+  }
+  @include respondTo('diapason') {
+    margin: 40px 0 0 458px;
+  }
+}
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  margin-right: 34px;
+}
+.img-btn-thumb {
+  @include respondTo('diapente') {
+    display: flex;
+    justify-content: space-between;
+  }
+}

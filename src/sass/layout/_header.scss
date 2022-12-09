@@ -1,0 +1,96 @@
+.header {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 16px;
+  left: 0;
+  z-index: 999;
+  @include respondTo('diapente') {
+    top: 24px;
+  }
+  &--container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation-header {
+  display: flex;
+  align-items: center;
+  &__picture {
+    width: 114px;
+    height: 39px;
+    @include respondTo('diapente') {
+      width: 127px;
+      height: 43px;
+    }
+  }
+  &__list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include respondTo('diapente') {
+      gap: 72px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    border: none;
+    @include respondTo('diapente') {
+      border-radius: 2px;
+      border: 1px solid mix(transparent, getColor('accent'), 30%);
+    }
+  }
+  &__phone-link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    @include respondTo('diapente') {
+      padding: 7px 7px;
+    }
+    // для другого телефона
+    &:not(:first-child) {
+      display: none;
+      @include respondTo('diapente') {
+        display: block;
+      }
+    }
+  }
+  &__link {
+    @extend %link;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-right: 6px;
+    color: getColor('accent');
+    @include respondTo('diapente') {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-right: 32px;
+    }
+  }
+  &__phone-text {
+    display: none;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.02em;
+    @include respondTo('diapente') {
+      display: block;
+      color: getColor('primary-inversed');
+    }
+  }
+  &__icon {
+    @extend %icon;
+    color: getColor('accent');
+    @include respondTo('diapente') {
+      margin-right: 8px;
+    }
+  }
+}

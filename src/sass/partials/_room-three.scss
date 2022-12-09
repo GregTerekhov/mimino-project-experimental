@@ -1,0 +1,153 @@
+.room-three {
+  background-color: #f0ecd6;
+}
+
+.room-three__container {
+  position: relative;
+}
+
+.room-three__wrapper {
+  @include respondTo('diapente') {
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    top: 66px;
+    right: 47px;
+  }
+
+  @include respondTo('diapason') {
+    top: 72px;
+    right: 120px;
+  }
+}
+
+.room-three__tagline {
+  text-align: end;
+  padding-top: 32px;
+  margin-bottom: 8px;
+  color: #b4b4b4;
+  @extend %marginPaddingReset;
+
+  @include respondTo('diapente') {
+    padding-top: 0;
+    margin-bottom: 4px;
+    font-size: 32px;
+  }
+}
+
+.room-three__brand {
+  text-align: end;
+  margin-bottom: 32px;
+  color: #494848;
+
+  @include respondTo('diapente') {
+    margin-bottom: 62px;
+  }
+
+  @include respondTo('diapason') {
+    margin-bottom: 72px;
+  }
+}
+
+.room-three__title {
+  font-family: $text-times-font;
+  font-style: normal;
+  text-align: end;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: #000000;
+  @extend %marginPaddingReset;
+
+  @include respondTo('diapente') {
+    padding-right: 26px;
+    margin-bottom: 16px;
+    text-align: start;
+    font-size: 30px;
+  }
+
+  @include respondTo('diapason') {
+    padding-right: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+  }
+}
+
+.room-three__text {
+  text-align: start;
+  max-width: 242px;
+  margin-left: 68px;
+  margin-bottom: 32px;
+  color: #5f5f5f;
+  @extend %list;
+  @extend %marginPaddingReset;
+
+  @include respondTo('diapente') {
+    margin-left: 0;
+    margin-bottom: 0;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.room__picture {
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+
+  @include respondTo('diapente') {
+    position: relative;
+    top: -32px;
+    left: 65px;
+  }
+}
+
+.button-wrapper {
+  margin-top: -27px;
+  @include respondTo('diapente') {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.room-three__link {
+  display: inline-block;
+  @include buttonSize(
+    $padding-top: 14px,
+    $padding-bottom: 14px,
+    $section-button: true
+  );
+  @include buttonPlace($light-section-button: true);
+  @extend %link;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  margin-left: 74px;
+  text-align: center;
+
+  @include respondTo('diapente') {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  @include respondTo('diapason') {
+    // margin-top: 63px;
+  }
+}
+
+.room-three__btn {
+  @include buttonSize(
+    $padding-top: 14px,
+    $padding-bottom: 14px,
+    $section-button: true
+  );
+  @include buttonPlace($light-section-button: true);
+  margin-bottom: 32px;
+  margin-left: 74px;
+
+  @include respondTo('diapente') {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}

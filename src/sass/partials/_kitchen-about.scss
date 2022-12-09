@@ -1,0 +1,136 @@
+.kitchen-about {
+  position: relative;
+}
+
+.kitchen-about__title {
+  margin-bottom: 12px;
+}
+
+.kitchen-about__subtitle {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: auto;
+  margin-left: 0;
+  color: 'primary';
+  max-width: 127px;
+  @include respondTo('unisonus') {
+    margin-bottom: 16px;
+  }
+  @include respondTo('diapente') {
+    max-width: 202px;
+    margin-bottom: 24px;
+  }
+  @include respondTo('diapason') {
+    color: mix(getColor('primary-inversed'), getColor('primary'), 68%);
+  }
+}
+.kitchen-about__article {
+  @include respondTo('tritonus') {
+    margin-bottom: 32px;
+  }
+  @include respondTo('diapente') {
+    margin-bottom: 142px;
+  }
+  @include respondTo('diapason') {
+    margin-bottom: 162px;
+  }
+}
+.kitchen-about__text {
+  @extend %marginPaddingReset;
+  display: block;
+  font-family: $text-font-stack;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  font-weight: 600;
+  margin-top: 12px;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+  width: 258px;
+  color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
+  @include respondTo('unisonus') {
+    width: 242px;
+    margin-bottom: 28px;
+    font-size: 12px;
+  }
+  @include respondTo('diapente') {
+    font-size: 16px;
+    width: 439px;
+    margin-bottom: 0px;
+  }
+  @include respondTo('diapason') {
+    width: 518px;
+  }
+}
+.kitchen-about__article-img-one {
+  display: block;
+  margin-left: 155px;
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+  @include respondTo('unisonus') {
+    max-width: 244px;
+  }
+  @include respondTo('diapente') {
+    max-width: 400px;
+    position: absolute;
+    top: -32px;
+    right: 65px;
+  }
+  @include respondTo('diapason') {
+    right: 95px;
+    max-width: 460px;
+    top: -33px;
+  }
+}
+.kitchen-about__article-img-two {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.kitchen-about__food {
+  display: flex;
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+  @include respondTo('tritonus') {
+    max-width: 200px;
+    margin-right: 20px;
+  }
+  @include respondTo('diapente') {
+    max-width: 350px;
+    margin-right: 48px;
+  }
+  @include respondTo('diapason') {
+    max-width: 460px;
+    margin-right: 32px;
+  }
+}
+.kitchen-about__text-food {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  font-family: $text-font-stack;
+  color: getColor('accent-darken');
+  @include respondTo('unisonus') {
+    width: 163px;
+    font-size: 12px;
+  }
+  @include respondTo('diapente') {
+    font-size: 16px;
+    width: 312px;
+  }
+  @include respondTo('diapason') {
+    width: 311px;
+    margin-bottom: 121px;
+  }
+}
+.kitchen-about__arrow {
+  display: flex;
+  justify-content: end;
+  gap: 32px;
+}

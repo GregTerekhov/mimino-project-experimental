@@ -1,0 +1,13 @@
+.tagline {
+  font-family: $text-times-font;
+  @extend %marginPaddingReset;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: mix(getColor('primary-inversed'), getColor('primary'), 78%);  // color: mix(getColor('primary-inversed'), getColor('primary'), 78%);
+
+  @include respondTo('diapente') {
+    font-size: 32px;
+    margin-bottom: 4px;
+  }
+}

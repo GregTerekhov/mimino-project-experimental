@@ -1,0 +1,165 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  @extend %marginPaddingReset;
+}
+.room-luxe {
+  padding: 32px 0;
+  background-color: #FFFDEE;
+  @include respondTo('diapente') {
+    padding: 62px 0;
+    position: relative;
+  }
+  @include respondTo('diapason') {
+    padding: 72px 0 48px;
+  }
+}
+.room-luxe__wrapper {
+  @include respondTo('diapente') {
+    display: inline-flex;
+    flex-direction: column;
+    top: 66px;
+    right: 47px;
+  }
+  @include respondTo('diapason') {
+    top: 72px;
+    right: 120px;
+  }
+}
+.room-luxe__tagline {
+  color: #B4B4B4;
+  margin-bottom: 8px;
+  @include respondTo('diapente') {
+    font-size: 32px;
+    line-height: 1.16;
+    margin-bottom: 4px;
+  }
+}
+.room-luxe__brand {
+  color: #494848;
+  margin-bottom: 32px;
+  @include respondTo('diapente') {
+    margin-bottom: 62px;
+  }
+  @include respondTo('diapason') {
+    margin-bottom: 72px;
+  }
+}
+.room-luxe__title {
+  font-family: 'Times New Roman';
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: #000000;
+  margin-bottom: 12px;
+  @include respondTo('diapente') {
+    font-size: 30px;
+    line-height: 1.13;
+    margin-bottom: 16px;
+  }
+  @include respondTo('diapason') {
+    font-size: 36px;
+    line-height: 1.14;
+    margin-bottom: 24px;
+  }
+}
+.room-luxe__text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #5F5F5F;
+  margin-bottom: 32px;
+  width: 258px;
+  @include respondTo('diapente') {
+    font-size: 16px;
+    line-height: 1.25;
+    width: 439px;
+    margin-bottom: 174px;
+  }
+  @include respondTo('diapason') {
+    margin-bottom: 188px;
+  }
+}
+.room-luxe__picture {
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  max-width: 242px;
+  height: 322px;
+  margin-left: auto;
+  margin-bottom: 32px;
+  @include respondTo('diapente') {
+    min-width: 400px;
+    height: 524px;
+    margin-left: 0;
+    margin-bottom: 0;
+    position: absolute;
+    transform: translate(123%, -109%);
+  }
+  @include respondTo('diapason') {
+    transform: translate(153%, -118%);
+  }
+}
+.button-wrapper {
+  @include respondTo('diapente') {
+    display: inline-block;
+  }
+}
+.room-luxe__link {
+  display: inline-block;
+  @include buttonSize(
+    $padding-top: 14px,
+    $padding-bottom: 14px,
+    $section-button: true
+  );
+  @include buttonPlace($light-section-button: true);
+  @extend %link;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  margin-left: 74px;
+  text-align: center;
+  @include respondTo('diapente') {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  @include respondTo('diapason') {
+    margin-top: 63px;
+  }
+}
+ .container-swiper__left{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+ }
+.room-luxe__btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 236px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: #000000;
+  text-align: center;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+    @include respondTo('diapente') {
+      margin-top: 41px;
+      @include respondTo('diapason') {
+        margin-top: 71px;
+      }
+    }
+  }
+}
